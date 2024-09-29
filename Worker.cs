@@ -3,61 +3,61 @@ using System;
 namespace HW7
 {
     /// <summary>
-    /// Структура Worker представляет данные о сотруднике.
+    /// РЎС‚СЂСѓРєС‚СѓСЂР° Worker РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ РґР°РЅРЅС‹Рµ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєРµ.
     /// </summary>
     struct Worker
     {
-        #region Свойства
+        #region РЎРІРѕР№СЃС‚РІР°
 
         /// <summary>
-        /// Идентификатор.
+        /// РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ.
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Время добавления записи.
+        /// Р’СЂРµРјСЏ РґРѕР±Р°РІР»РµРЅРёСЏ Р·Р°РїРёСЃРё.
         /// </summary>
         public DateTime AddedTime { get; set; }
 
         /// <summary>
-        /// Фамилия, Имя, Отчество.
+        /// Р¤Р°РјРёР»РёСЏ, РРјСЏ, РћС‚С‡РµСЃС‚РІРѕ.
         /// </summary>
         public string FIO { get; set; }
 
         /// <summary>
-        /// Возраст.
+        /// Р’РѕР·СЂР°СЃС‚.
         /// </summary>
         public int Age { get; set; }
 
         /// <summary>
-        /// Рост.
+        /// Р РѕСЃС‚.
         /// </summary>
         public int Height { get; set; }
 
         /// <summary>
-        /// Дата рождения.
+        /// Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ.
         /// </summary>
         public DateTime BirthDate { get; set; }
 
         /// <summary>
-        /// Место рождения.
+        /// РњРµСЃС‚Рѕ СЂРѕР¶РґРµРЅРёСЏ.
         /// </summary>
         public string BirthPlace { get; set; }
 
         #endregion
 
-        #region Конструктор
+        #region РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 
         /// <summary>
-        /// Конструктор для создания нового объекта Worker с инициализацией всех полей.
+        /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕРіРѕ РѕР±СЉРµРєС‚Р° Worker СЃ РёРЅРёС†РёР°Р»РёР·Р°С†РёРµР№ РІСЃРµС… РїРѕР»РµР№.
         /// </summary>
-        /// <param name="id">Идентификатор.</param>
-        /// <param name="addedTime">Время добавления записи.</param>
-        /// <param name="fio">Фамилия, Имя, Отчество.</param>
-        /// <param name="age">Возраст.</param>
-        /// <param name="height">Рост.</param>
-        /// <param name="birthDate">Дата рождения.</param>
-        /// <param name="birthPlace">Место рождения.</param>
+        /// <param name="id">РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ.</param>
+        /// <param name="addedTime">Р’СЂРµРјСЏ РґРѕР±Р°РІР»РµРЅРёСЏ Р·Р°РїРёСЃРё.</param>
+        /// <param name="fio">Р¤Р°РјРёР»РёСЏ, РРјСЏ, РћС‚С‡РµСЃС‚РІРѕ.</param>
+        /// <param name="age">Р’РѕР·СЂР°СЃС‚.</param>
+        /// <param name="height">Р РѕСЃС‚.</param>
+        /// <param name="birthDate">Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ.</param>
+        /// <param name="birthPlace">РњРµСЃС‚Рѕ СЂРѕР¶РґРµРЅРёСЏ.</param>
         public Worker(int id, DateTime addedTime, string fio, int age, int height, DateTime birthDate, string birthPlace)
         {
             Id = id;
@@ -71,22 +71,22 @@ namespace HW7
 
         #endregion
 
-        #region Методы
+        #region РњРµС‚РѕРґС‹
 
         /// <summary>
-        /// Переопределение метода ToString для вывода информации о работнике.
+        /// РџРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РјРµС‚РѕРґР° ToString РґР»СЏ РІС‹РІРѕРґР° РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЂР°Р±РѕС‚РЅРёРєРµ.
         /// </summary>
-        /// <returns>Строка, содержащая информацию о работнике в формате CSV.</returns>
+        /// <returns>РЎС‚СЂРѕРєР°, СЃРѕРґРµСЂР¶Р°С‰Р°СЏ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЂР°Р±РѕС‚РЅРёРєРµ РІ С„РѕСЂРјР°С‚Рµ CSV.</returns>
         public override string ToString()
         {
             return $"{Id};{AddedTime:dd.MM.yyyy HH:mm};{FIO};{Age};{Height};{BirthDate:dd.MM.yyyy};{BirthPlace}";
         }
 
         /// <summary>
-        /// Метод для создания объекта Worker из строки CSV.
+        /// РњРµС‚РѕРґ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚Р° Worker РёР· СЃС‚СЂРѕРєРё CSV.
         /// </summary>
-        /// <param name="csvLine">Строка CSV с данными о работнике.</param>
-        /// <returns>Новый объект Worker.</returns>
+        /// <param name="csvLine">РЎС‚СЂРѕРєР° CSV СЃ РґР°РЅРЅС‹РјРё Рѕ СЂР°Р±РѕС‚РЅРёРєРµ.</param>
+        /// <returns>РќРѕРІС‹Р№ РѕР±СЉРµРєС‚ Worker.</returns>
         public static Worker FromCsvString(string csvLine)
         {
             string[] values = csvLine.Split(';');
@@ -102,9 +102,9 @@ namespace HW7
         }
 
         /// <summary>
-        /// Метод для конвертации объекта Worker в строку CSV.
+        /// РњРµС‚РѕРґ РґР»СЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё РѕР±СЉРµРєС‚Р° Worker РІ СЃС‚СЂРѕРєСѓ CSV.
         /// </summary>
-        /// <returns>Строка CSV с данными о работнике.</returns>
+        /// <returns>РЎС‚СЂРѕРєР° CSV СЃ РґР°РЅРЅС‹РјРё Рѕ СЂР°Р±РѕС‚РЅРёРєРµ.</returns>
         public string ToCsvString()
         {
             return $"{Id};{AddedTime:dd.MM.yyyy HH:mm};{FIO};{Age};{Height};{BirthDate:dd.MM.yyyy};{BirthPlace}";
